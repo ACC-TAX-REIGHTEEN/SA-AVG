@@ -18,7 +18,8 @@ def rapikan_faktur_penjualan(input_path, output_path):
         'Nama Gudang', 
         'Nama Penjual', 
         'Kota Pelanggan',
-        'Negara Pelanggan', 
+        'Negara Pelanggan',
+        'Nama kontak Pelanggan',
         'Tgl terima Last Payment'
     ]
     
@@ -59,6 +60,8 @@ def rapikan_faktur_penjualan(input_path, output_path):
             elif target == 'Alamat 1 Pelanggan' and 'alamat' in text_clean:
                 best_col = col_idx
             elif target == 'Negara Pelanggan' and 'negara' in text_clean:
+                best_col = col_idx
+            elif target == 'Nama kontak Pelanggan' and 'kontak' in text_clean:
                 best_col = col_idx
             elif target == 'Tgl terima Last Payment' and ('tglterima' in text_clean or 'lastpayment' in text_clean or 'payment' in text_clean):
                 best_col = col_idx
